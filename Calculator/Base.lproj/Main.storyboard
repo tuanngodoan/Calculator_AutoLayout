@@ -22,23 +22,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-Hh-Xea" userLabel="Display View">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdg-Hh-Xea" userLabel="Display View" customClass="GradientView" customModule="Calculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="292"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-H8-3fq">
-                                        <rect key="frame" x="8" y="72" width="359" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-H8-3fq">
+                                        <rect key="frame" x="8" y="85" width="359" height="17"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNL-wt-Kv1">
-                                        <rect key="frame" x="173" y="140" width="30" height="58"/>
+                                        <rect key="frame" x="172.5" y="140" width="30" height="58"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                         <color key="textColor" red="0.97377733519999998" green="1" blue="0.99577436239999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.43137254899999999" green="0.85490196080000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33339450500000001" green="0.6614408557" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="HNL-wt-Kv1" firstAttribute="top" secondItem="FiH-H8-3fq" secondAttribute="bottom" constant="38" id="0rG-4l-ukJ"/>
                                     <constraint firstItem="FiH-H8-3fq" firstAttribute="leading" secondItem="Zdg-Hh-Xea" secondAttribute="leading" constant="8" id="1q6-pD-O2B"/>
@@ -46,137 +46,232 @@
                                     <constraint firstItem="HNL-wt-Kv1" firstAttribute="centerX" secondItem="Zdg-Hh-Xea" secondAttribute="centerX" constant="-0.5" id="pb3-hj-frC"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vr-6k-KPG" userLabel="CalculatorView">
+                            <view tag="110" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Vr-6k-KPG" userLabel="CalculatorView" customClass="GradientView" customModule="Calculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="292" width="375" height="375"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-VI-uZL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-VI-uZL" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="13" y="53" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.39711235934495248" green="1" blue="0.085504242380700424" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="oxb-VI-uZL" secondAttribute="height" multiplier="73:62" id="yq0-zd-Qyh"/>
                                         </constraints>
-                                        <state key="normal" title="7"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gC-ZX-O3L"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKM-Pe-UuQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKM-Pe-UuQ" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="105" y="53" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.3971123593" green="1" blue="0.085504242379999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uKM-Pe-UuQ" secondAttribute="height" multiplier="73:62" id="yag-rE-lcO"/>
                                         </constraints>
-                                        <state key="normal" title="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wON-ng-xsg"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enG-ne-ym3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enG-ne-ym3" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="197" y="53" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.3971123593" green="1" blue="0.085504242379999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="enG-ne-ym3" secondAttribute="height" multiplier="73:62" id="CxZ-Ce-ukz"/>
                                         </constraints>
-                                        <state key="normal" title="9"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCb-yO-eA2"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4I-GV-yrR">
-                                        <rect key="frame" x="289" y="53" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.3971123593" green="1" blue="0.085504242379999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="A4I-GV-yrR" secondAttribute="height" multiplier="73:62" id="d9r-bP-Hzc"/>
-                                        </constraints>
-                                        <state key="normal" title="*"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ma-tm-qPr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ma-tm-qPr" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="13" y="134" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202927566339" green="1" blue="0.081668636977560993" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1ma-tm-qPr" secondAttribute="height" multiplier="73:62" id="3f2-8x-zIO"/>
                                         </constraints>
-                                        <state key="normal" title="4"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r9e-eZ-gvs"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-Qk-oMs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-Qk-oMs" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="105" y="134" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ve3-Qk-oMs" secondAttribute="height" multiplier="73:62" id="0Bx-nc-kkq"/>
                                         </constraints>
-                                        <state key="normal" title="5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lGK-6N-3Wa"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAA-5K-16O">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAA-5K-16O" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="105" y="215" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EAA-5K-16O" secondAttribute="height" multiplier="73:62" id="BVr-5G-VDe"/>
                                         </constraints>
-                                        <state key="normal" title="2"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EuY-HS-uM7"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGT-47-k85">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGT-47-k85" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="13" y="215" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QGT-47-k85" secondAttribute="height" multiplier="73:62" id="RaB-eI-Zte"/>
                                         </constraints>
-                                        <state key="normal" title="1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFh-WF-i8Q"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awe-Ia-3Y3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awe-Ia-3Y3" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="197" y="134" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="awe-Ia-3Y3" secondAttribute="height" multiplier="73:62" id="P6u-Ga-RCC"/>
                                         </constraints>
-                                        <state key="normal" title="6"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1DG-ff-mSv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92X-yH-Xej">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92X-yH-Xej" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="197" y="215" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="92X-yH-Xej" secondAttribute="height" multiplier="73:62" id="ypO-4I-fOY"/>
                                         </constraints>
-                                        <state key="normal" title="3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2zJ-np-81M"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1P-e9-fP7">
-                                        <rect key="frame" x="289" y="215" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="M1P-e9-fP7" secondAttribute="height" multiplier="73:62" id="UFV-Ec-5vL"/>
-                                        </constraints>
-                                        <state key="normal" title="+"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6Z-9V-DhA">
-                                        <rect key="frame" x="289" y="134" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.30755202929999997" green="1" blue="0.081668636980000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="V6Z-9V-DhA" secondAttribute="height" multiplier="73:62" id="V5D-5d-SM9"/>
-                                        </constraints>
-                                        <state key="normal" title="-"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go8-ju-snV">
-                                        <rect key="frame" x="13" y="296" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.17782180030727068" green="1" blue="0.11601077855437014" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="height" multiplier="73:62" id="D9v-X1-B7K"/>
-                                        </constraints>
-                                        <state key="normal" title="0"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P44-1B-5RD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P44-1B-5RD" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="105" y="296" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.17782180030727068" green="1" blue="0.11601077855437014" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P44-1B-5RD" secondAttribute="height" multiplier="73:62" id="a1b-ZW-6hD"/>
                                         </constraints>
-                                        <state key="normal" title="0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKR-8F-5Br">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go8-ju-snV" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="296" width="73" height="62"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="height" multiplier="73:62" id="D9v-X1-B7K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                            <color key="titleShadowColor" red="0.91219159019999996" green="1" blue="0.8468596021" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SdM-fd-IeV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6Z-9V-DhA" customClass="Operator" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="289" y="134" width="73" height="62"/>
+                                        <color key="backgroundColor" red="0.41960784313725491" green="0.65490196078431373" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="V6Z-9V-DhA" secondAttribute="height" multiplier="73:62" id="V5D-5d-SM9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1L-En-nHR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1P-e9-fP7" customClass="Operator" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="289" y="215" width="73" height="62"/>
+                                        <color key="backgroundColor" red="0.41960784313725491" green="0.65490196078431373" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="M1P-e9-fP7" secondAttribute="height" multiplier="73:62" id="UFV-Ec-5vL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZy-dR-iaC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4I-GV-yrR" customClass="Operator" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="289" y="53" width="73" height="62"/>
+                                        <color key="backgroundColor" red="0.41960784313725491" green="0.65490196078431373" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="A4I-GV-yrR" secondAttribute="height" multiplier="73:62" id="d9r-bP-Hzc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="*"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MgA-l5-Yyo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKR-8F-5Br" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="197" y="296" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.17782180030727068" green="1" blue="0.11601077855437014" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="bKR-8F-5Br" secondAttribute="height" multiplier="73:62" id="mCi-re-Ezq"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                        <state key="normal" title="."/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title=".">
+                                            <color key="titleColor" red="0.97377733519999998" green="1" blue="0.99577436239999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="numberAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Egn-mg-1Dz"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-y7-kRA">
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-y7-kRA" customClass="Operator" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="289" y="296" width="73" height="62"/>
-                                        <color key="backgroundColor" red="0.17782180030727068" green="1" blue="0.11601077855437014" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="K7X-y7-kRA" secondAttribute="height" multiplier="73:62" id="QRC-k1-9Ex"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="="/>
+                                        <connections>
+                                            <action selector="equalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ht6-BS-ea0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,40 +334,56 @@
                                     <constraint firstItem="EAA-5K-16O" firstAttribute="width" secondItem="QGT-47-k85" secondAttribute="width" id="yoZ-Zd-8ZC"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6o-gj-2pt" userLabel="Middle View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6o-gj-2pt" userLabel="Middle View">
                                 <rect key="frame" x="0.0" y="264" width="375" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wej-6f-oGf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wej-6f-oGf" customClass="Operator" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="13" y="0.0" width="73" height="62"/>
-                                        <color key="backgroundColor" red="1" green="0.058730558549274448" blue="0.13712742096426001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.6470588235294118" blue="0.44705882352941179" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Wej-6f-oGf" secondAttribute="height" multiplier="73:62" id="jhY-AR-VGb"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="AC"/>
+                                        <connections>
+                                            <action selector="ACAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2d9-9x-30r"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-Mu-t8x">
-                                        <rect key="frame" x="105" y="0.0" width="73" height="62"/>
-                                        <color key="backgroundColor" red="1" green="0.058730558549999999" blue="0.137127421" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-Mu-t8x" customClass="Operator" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="105" y="0.0" width="73.5" height="62"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.6470588235294118" blue="0.44705882352941179" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="t7d-Mu-t8x" secondAttribute="height" multiplier="73:62" id="nYH-Qo-Vwe"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="+/-"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gob-lk-Tqa"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-Kq-em3">
-                                        <rect key="frame" x="197" y="0.0" width="73" height="62"/>
-                                        <color key="backgroundColor" red="1" green="0.058730558549999999" blue="0.137127421" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-Kq-em3" customClass="Operator" customModule="Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="197.5" y="0.0" width="72.5" height="62"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.6470588235294118" blue="0.44705882352941179" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="TN4-Kq-em3" secondAttribute="height" multiplier="73:62" id="f8f-5t-jft"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="%"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VD-ab-DLX"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNU-wI-GPL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNU-wI-GPL" customClass="Operator" customModule="Calculator" customModuleProvider="target">
                                         <rect key="frame" x="289" y="0.0" width="73" height="62"/>
-                                        <color key="backgroundColor" red="1" green="0.058730558549999999" blue="0.137127421" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.6470588235294118" blue="0.44705882352941179" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="GNU-wI-GPL" secondAttribute="height" multiplier="73:62" id="X8Q-se-NcN"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="/"/>
+                                        <connections>
+                                            <action selector="operatorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="647-WH-jpI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -319,11 +430,14 @@
                     <connections>
                         <outlet property="distanceBetweenInputTextFieldAndResultLable" destination="0rG-4l-ukJ" id="NUd-OP-wjJ"/>
                         <outlet property="distanceBetweenResultLableAndMiddleView" destination="7Yi-YE-kEm" id="4bv-oL-Gqp"/>
+                        <outlet property="inputTextField" destination="FiH-H8-3fq" id="PiA-gb-ABL"/>
+                        <outlet property="resultLable" destination="HNL-wt-Kv1" id="QOZ-xN-qGS"/>
+                        <outlet property="zeroNumber" destination="go8-ju-snV" id="FkG-zb-u5N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="58"/>
+            <point key="canvasLocation" x="175" y="-27"/>
         </scene>
     </scenes>
 </document>
