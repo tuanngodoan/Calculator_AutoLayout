@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -197,10 +197,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go8-ju-snV" customClass="NumberButtonView" customModule="Calculator" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="296" width="73" height="62"/>
+                                        <rect key="frame" x="13" y="296" width="165" height="62"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="height" multiplier="73:62" id="D9v-X1-B7K"/>
+                                            <constraint firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="height" multiplier="73:62" constant="92" id="D9v-X1-B7K"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="0">
@@ -280,7 +280,7 @@
                                     <constraint firstItem="uKM-Pe-UuQ" firstAttribute="width" secondItem="oxb-VI-uZL" secondAttribute="width" id="1RX-n9-9eW"/>
                                     <constraint firstItem="K7X-y7-kRA" firstAttribute="top" secondItem="M1P-e9-fP7" secondAttribute="bottom" constant="19" id="2Hr-BU-nMo"/>
                                     <constraint firstItem="oxb-VI-uZL" firstAttribute="leading" secondItem="2Vr-6k-KPG" secondAttribute="leading" constant="13" id="31v-uL-4FT"/>
-                                    <constraint firstItem="bKR-8F-5Br" firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="width" id="3KZ-1q-nND"/>
+                                    <constraint firstItem="bKR-8F-5Br" firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="width" constant="-92" id="3KZ-1q-nND"/>
                                     <constraint firstItem="EAA-5K-16O" firstAttribute="top" secondItem="Ve3-Qk-oMs" secondAttribute="bottom" constant="19" id="42k-vU-zdn"/>
                                     <constraint firstItem="EAA-5K-16O" firstAttribute="leading" secondItem="QGT-47-k85" secondAttribute="trailing" constant="19" id="4NO-aP-aro"/>
                                     <constraint firstItem="enG-ne-ym3" firstAttribute="height" secondItem="oxb-VI-uZL" secondAttribute="height" id="61J-45-0OH"/>
@@ -293,7 +293,7 @@
                                     <constraint firstItem="92X-yH-Xej" firstAttribute="top" secondItem="awe-Ia-3Y3" secondAttribute="bottom" constant="19" id="Ee6-BI-HTK"/>
                                     <constraint firstItem="M1P-e9-fP7" firstAttribute="height" secondItem="QGT-47-k85" secondAttribute="height" id="Gmo-hu-07y"/>
                                     <constraint firstItem="awe-Ia-3Y3" firstAttribute="leading" secondItem="Ve3-Qk-oMs" secondAttribute="trailing" constant="19" id="Hv2-j2-Swt"/>
-                                    <constraint firstItem="P44-1B-5RD" firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="width" id="IpI-Mp-lIM"/>
+                                    <constraint firstItem="P44-1B-5RD" firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="width" constant="-92" id="IpI-Mp-lIM"/>
                                     <constraint firstItem="enG-ne-ym3" firstAttribute="width" secondItem="oxb-VI-uZL" secondAttribute="width" id="JVd-HM-rhh"/>
                                     <constraint firstAttribute="trailing" secondItem="K7X-y7-kRA" secondAttribute="trailing" constant="13" id="MPB-Q7-RNz"/>
                                     <constraint firstItem="V6Z-9V-DhA" firstAttribute="width" secondItem="1ma-tm-qPr" secondAttribute="width" id="OKN-jd-PvJ"/>
@@ -307,7 +307,7 @@
                                     <constraint firstItem="K7X-y7-kRA" firstAttribute="height" secondItem="go8-ju-snV" secondAttribute="height" id="Xxv-VJ-n8T"/>
                                     <constraint firstItem="awe-Ia-3Y3" firstAttribute="top" secondItem="enG-ne-ym3" secondAttribute="bottom" constant="19" id="ZGE-Bj-aMJ"/>
                                     <constraint firstAttribute="trailing" secondItem="V6Z-9V-DhA" secondAttribute="trailing" constant="13" id="c2r-o7-AQr"/>
-                                    <constraint firstItem="P44-1B-5RD" firstAttribute="leading" secondItem="go8-ju-snV" secondAttribute="trailing" constant="19" id="cCR-IW-9Sv"/>
+                                    <constraint firstItem="P44-1B-5RD" firstAttribute="leading" secondItem="go8-ju-snV" secondAttribute="trailing" constant="-73" id="cCR-IW-9Sv"/>
                                     <constraint firstItem="A4I-GV-yrR" firstAttribute="leading" secondItem="enG-ne-ym3" secondAttribute="trailing" constant="19" id="chZ-MF-kxW"/>
                                     <constraint firstItem="QGT-47-k85" firstAttribute="leading" secondItem="2Vr-6k-KPG" secondAttribute="leading" constant="13" id="dg7-mz-lDG"/>
                                     <constraint firstItem="uKM-Pe-UuQ" firstAttribute="height" secondItem="oxb-VI-uZL" secondAttribute="height" id="dzM-Sj-GdO"/>
@@ -317,7 +317,7 @@
                                     <constraint firstItem="K7X-y7-kRA" firstAttribute="leading" secondItem="bKR-8F-5Br" secondAttribute="trailing" constant="19" id="huf-1X-iIi"/>
                                     <constraint firstItem="bKR-8F-5Br" firstAttribute="top" secondItem="92X-yH-Xej" secondAttribute="bottom" constant="19" id="kmr-l9-pAV"/>
                                     <constraint firstItem="92X-yH-Xej" firstAttribute="width" secondItem="QGT-47-k85" secondAttribute="width" id="kyN-0P-qFQ"/>
-                                    <constraint firstItem="K7X-y7-kRA" firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="width" id="moW-qt-0Nh"/>
+                                    <constraint firstItem="K7X-y7-kRA" firstAttribute="width" secondItem="go8-ju-snV" secondAttribute="width" constant="-92" id="moW-qt-0Nh"/>
                                     <constraint firstItem="bKR-8F-5Br" firstAttribute="leading" secondItem="P44-1B-5RD" secondAttribute="trailing" constant="19" id="oZW-xX-vjb"/>
                                     <constraint firstItem="go8-ju-snV" firstAttribute="leading" secondItem="2Vr-6k-KPG" secondAttribute="leading" constant="13" id="pB9-Pa-4RJ"/>
                                     <constraint firstItem="P44-1B-5RD" firstAttribute="top" secondItem="EAA-5K-16O" secondAttribute="bottom" constant="19" id="pgR-R8-PKr"/>
@@ -437,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="-27"/>
+            <point key="canvasLocation" x="173.59999999999999" y="-27.436281859070466"/>
         </scene>
     </scenes>
 </document>
